@@ -16,4 +16,5 @@ int main() {
 EXTERN EMSCRIPTEN_KEEPALIVE void myFunction(int argc, char **argv) {
     printf("MyFunction Called\n");
 }
-// emcc -o hello3.html hello3.c --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1 -s "EXPORTED_RUNTIME_METHODS=['ccall']"
+// emcc -o index.html hello3.c --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1 -s "EXPORTED_RUNTIME_METHODS=['ccall']"
+// git add . && git commit -m "add hello3.c" && git push
