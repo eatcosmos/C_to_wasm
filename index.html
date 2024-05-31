@@ -68,7 +68,18 @@
     <hr/>
     <textarea class="emscripten" id="output" rows="8"></textarea>
     <hr>
+    <button id="mybutton">Run myFunction</button>
+
     <script type='text/javascript'>
+      document.getElementById("mybutton").addEventListener("click", () => {
+        alert("check console");
+        const result = Module.ccall(
+          "myFunction", // name of C function
+          null, // return type
+          null, // argument types
+          null, // arguments
+        );
+      });
       var statusElement = document.getElementById('status');
       var progressElement = document.getElementById('progress');
       var spinnerElement = document.getElementById('spinner');
